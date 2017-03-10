@@ -1,0 +1,42 @@
+body{
+  background-color: #a6d7b0;
+  margin: 0;
+  padding: 0;
+}
+.mobile-nav{
+  height: 30px;
+  width: 30px;
+  position: relative;
+  background-color:#a6d7b0;
+}
+.mobile-nav span, .mobile-nav span:before, .mobile-nav span:after{
+  position: absolute;
+  height: 1px;
+  width: 26px;
+  background-color: #f3ec26;
+}
+.mobile-nav span{
+  margin-top: 50%;
+  transition: background 0.3s;
+}
+.mobile-nav span:before{
+  content: "";
+  margin-top: 7px;
+  transition: transform 0.3s;
+}
+.mobile-nav span:after{
+  content: "";
+  margin-top: -7px;
+  transition: transform 0.3s;
+}
+.mobile-nav.visible span{
+  background-color: #a6d7b0;
+}
+.mobile-nav.visible span:before{
+  transform: rotate(45deg);
+  margin-top: 0;
+}
+.mobile-nav.visible span:after{
+  transform: rotate(-45deg);
+  margin-top: 0;
+}
